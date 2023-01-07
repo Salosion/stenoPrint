@@ -206,17 +206,17 @@
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-	content: "prev";
+	background-image: url('@img/icons/arrow-left.svg');
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
 	right: 10px;
 	left: auto;
 }
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-	content: "next";
-}
+// .swiper-button-next:after,
+// .swiper-rtl .swiper-button-prev:after {
+// 	content: "next";
+// }
 .swiper-button-lock {
 	display: none;
 }
@@ -234,7 +234,6 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-	bottom: 10px;
 	left: 0;
 	width: 100%;
 }
@@ -312,10 +311,10 @@ button.swiper-pagination-bullet {
 	display: inline-block;
 	transition: 0.2s transform, 0.2s top;
 }
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
-}
+// .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+// .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+// 	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+// }
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
 	left: 50%;
