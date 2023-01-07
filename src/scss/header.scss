@@ -377,6 +377,7 @@
 //Burger
 
 .menu {
+  z-index: 9;
   position: absolute;
   left: -120%;
   top: rem(225);
@@ -458,4 +459,5 @@
 
 .active {
   display: flex;
+  z-index: 9;
 }
