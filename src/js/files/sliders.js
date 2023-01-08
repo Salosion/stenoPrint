@@ -73,9 +73,6 @@ function initSliders() {
 			pagination: {
         el: '.slider-hero__pagination',
 				clickable: false,
-        // dynamicBullets: true,
-        // dynamicMainBullets: 1,
-        
 			},
 			// Arrows
 			navigation: {
