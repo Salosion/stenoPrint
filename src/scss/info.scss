@@ -1,0 +1,33 @@
+.info {
+  @include adaptiveValue("padding-bottom", 120, 60);
+}
+
+.body-info {
+  display: flex;
+  justify-content: space-between;
+  @include adaptiveValue("column-gap", 130, 30);
+
+  @media (max-width:$tablet) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width:$mobile) {
+    display: none;
+  }
+
+  &__title {
+    @include adaptiveValue("max-width", 470, 350);
+  }
+
+  &__text-box {
+    flex-basis: rem(830);
+  }
+
+  &__text {
+    &:first-of-type {
+      margin-bottom: rem(10);
+    }
+
+    line-height: math.div(22, 16);
+  }
+}
