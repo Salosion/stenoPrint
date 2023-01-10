@@ -52,6 +52,7 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "base/null";
 
 body {
+  background-color: #FAF8F5;
   font-weight: 400;
 	// Скролл заблокирован
 	.lock & {
@@ -137,6 +138,7 @@ body {
 @import "footer";
 @import "hero";
 @import "info";
+@import "feature";
 
 // Подключение стилей отдельных страниц
 @import "index";

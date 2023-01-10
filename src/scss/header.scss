@@ -316,12 +316,15 @@
     top: 117%;
     left: rem(0);
     gap: rem(20);
-    background-color: $whiteColor;
+    background-color: #faf8f5;
+    padding-left: rem(15);
+    padding-right: rem(15);
     @include adaptiveValue("padding-top", 60, 30);
     @include adaptiveValue("padding-bottom", 60, 30);
 
     @media (max-width:$tablet) {
       padding-top: 0;
+      top: 111%;
     }
 
     @media (max-width:$mobileSmall) {
