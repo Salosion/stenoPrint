@@ -2,6 +2,12 @@
   @include adaptiveValue("padding-bottom", 120, 60);
 }
 
+.info {
+  @media (max-width:$mobile){
+    padding: 0;
+  }
+}
+
 .body-info {
   display: flex;
   justify-content: space-between;
