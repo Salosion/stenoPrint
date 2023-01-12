@@ -1,3 +1,128 @@
-//====================================================================================================
+.footer {
+  @include adaptiveValue("padding-top", 60, 20);
+  border-top: rem(1) solid #d2d2d9;
+  padding-bottom: rem(20);
 
-//====================================================================================================
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include adaptiveValue("padding-bottom", 60, 30);
+    gap: rem(20);
+
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+    }
+  }
+}
+
+.spollers-body-footer {
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(23, 18);
+    color: $mainColor;
+    @include adaptiveValue("margin-bottom", 20, 10);
+  }
+
+  &__content {
+    max-width: rem(300);
+  }
+
+  &__content-item {
+    margin-bottom: rem(10);
+  }
+
+  &__content-link {
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(22, 16);
+    color: $textColor;
+  }
+}
+
+.menu__footer {
+  &-list {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 30, 15);
+  }
+
+  &-link {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(23, 18);
+    color: $mainColor;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      border-bottom: rem(2) solid $mainColor;
+      height: rem(2);
+      bottom: 0;
+      left: 0;
+      width: 0;
+      transition: all 0.3s ease 0s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.contacts-body-footer {
+  display: flex;
+  flex-direction: column;
+  @include adaptiveValue("gap", 30, 15);
+
+  &__phone-text,
+  &__email-text {
+    margin-bottom: rem(6);
+    font-size: rem(12);
+    line-height: math.div(17, 12);
+    color: $textColor;
+  }
+
+  &__phone-link {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 22, 18);
+    line-height: math.div(29, 22);
+    color: $mainColor;
+  }
+
+  &__email-text {
+    margin-bottom: rem(10);
+  }
+
+  &__email-link {
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(23, 18);
+    color: $mainColor;
+    font-weight: 600;
+  }
+
+  &__social {
+    display: flex;
+    gap: rem(10);
+  }
+}
+
+.copy-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(30);
+  border-top: rem(1) solid #d2d2d9;
+  padding-top: rem(20);
+  font-size: rem(12);
+  line-height: math.div(17, 12);
+  color: $textColor;
+
+  &__made {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    white-space: nowrap;
+  }
+}
