@@ -52,7 +52,7 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "base/null";
 
 body {
-  background-color: #FAF8F5;
+  background-color: #faf8f5;
   font-weight: 400;
 	// Скролл заблокирован
 	.lock & {
