@@ -289,6 +289,14 @@
     background: $redColor;
     border-radius: rem(50);
     white-space: nowrap;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $redHover;
+        box-shadow: rem(0) rem(15) rem(20) rem(-15) #FF0D35;
+      }
+    }
 
     @media (max-width:$tablet) {
       border-radius: rem(0);

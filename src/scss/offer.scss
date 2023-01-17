@@ -1,0 +1,143 @@
+.offer {
+  @include adaptiveValue("padding-top", 120, 60);
+  @include adaptiveValue("padding-bottom", 120, 60);
+
+  &__container {
+    border: rem(2) solid $whiteColor;
+    border-radius: rem(40);
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width:$mobile) {
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url('@img/offer/decor.svg');
+        right: 0;
+        bottom: 0;
+        @include adaptiveValue("width", 458, 250);
+        @include adaptiveValue("height", 320, 200);
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.offer__body {
+  display: inline-flex;
+  flex-direction: column;
+  @include adaptiveValue("padding", 60, 10);
+  z-index: 99;
+  @include adaptiveValue("gap", 50, 15);
+}
+
+.body-offer {
+  &__top {
+    max-width: rem(513);
+  }
+
+  &__top-title {
+    margin-bottom: rem(20);
+  }
+
+  &__top-text {
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(22, 16);
+    color: $textColor;
+  }
+}
+
+.form-offer {
+  &__top {
+    display: flex;
+    gap: rem(10);
+    flex-wrap: wrap;
+    margin-bottom: rem(30);
+  }
+
+  &__top-box {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+
+  &__top-span {
+    font-size: rem(12);
+    line-height: math.div(17, 12);
+    color: $textColor;
+  }
+
+  &__top-name,
+  &__top-phone {
+    padding: rem(20) rem(25);
+    background: #fffefc;
+    border: rem(2) solid #ededf2;
+    border-radius: rem(10);
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("width", 350, 270);
+    font-weight: 600;
+    color: $textColor;
+
+    &:focus {
+      outline-color: $redColor;
+    }
+  }
+
+  &__top-name::placeholder {
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(22, 14);
+    font-weight: 600;
+    color: $textColor;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include adaptiveValue("gap", 30, 15);
+  }
+
+  &__bottom-btn {
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(22, 16);
+    font-weight: 600;
+    color: $whiteColor;
+    padding: rem(20) rem(50);
+    background: $redColor;
+    border-radius: rem(50);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $redHover;
+        box-shadow: rem(0) rem(15) rem(20) rem(-15) #FF0D35;
+      }
+    }
+
+    @media (max-width:$mobileSmall) {
+      width: 100%;
+    }
+  }
+
+  &__bottom-text {
+    @include adaptiveValue("font-size", 14, 12);
+    line-height: math.div(20, 14);
+    color: $textColor;
+    max-width: rem(300);
+
+    @media (max-width:$mobileSmall) {
+      text-align: center;
+    }
+  }
+
+  &__bottom-link {
+    border-bottom: rem(1) solid $textColor;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: $redHover;
+      border-color: $redHover;
+    }
+  }
+}

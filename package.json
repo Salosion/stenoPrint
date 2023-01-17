@@ -68,6 +68,7 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "imask": "^6.4.3",
     "simplebar": "latest"
   },
   "main": "gulpfile.js"
