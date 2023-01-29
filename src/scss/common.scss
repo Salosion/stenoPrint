@@ -4,3 +4,99 @@
   line-height: math.div(52, 40);
   font-weight: 600;
 }
+
+//========================================================================================================================================================
+
+// Карточка блога
+
+.blog-card {
+  display: inline-block;
+  border: rem(2) solid $whiteColor;
+  border-radius: rem(30);
+  background-color: $whiteColor;
+  transition: all 0.3s ease 0s;
+  max-width: rem(460);
+  overflow: hidden;
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: rem(0) rem(15) rem(20) rem(-15) $mainColor;
+    }
+  }
+
+  &__img {
+    position: relative;
+    border-radius: rem(30);
+    max-height: rem(250);
+    width: 100%;
+  }
+
+  &__span {
+    position: absolute;
+    background-color: $redColor;
+    color: $whiteColor;
+    bottom: 20px;
+    left: rem(35);
+    padding: rem(8) rem(16);
+    border-radius: rem(50);
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+  }
+
+  &__body {
+    @include adaptiveValue("padding-top", 30, 20);
+    @include adaptiveValue("padding-left", 40, 30);
+    @include adaptiveValue("padding-right", 40, 30);
+    padding-bottom: rem(20);
+    max-width: rem(470);
+  }
+
+  &__body-title {
+    font-weight: 600;
+    line-height: math.div(23, 18);
+    color: $mainColor;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+
+    @include adaptiveValue("font-size", 18, 16);
+    @include adaptiveValue("margin-bottom", 50, 15);
+  }
+
+  &__body-text {
+    line-height: math.div(22, 16);
+    color: $textColor;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    @include adaptiveValue("font-size", 16, 14);
+  }
+
+  &__body-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__body-box__date {
+    color: $textColor;
+    font-weight: 600;
+    font-size: rem(14);
+  }
+}
+
+.view-blog-card {
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+  font-size: rem(14);
+  line-height: math.div(20, 14);
+  font-weight: 600;
+  color: $textColor;
+}
+
+//========================================================================================================================================================
