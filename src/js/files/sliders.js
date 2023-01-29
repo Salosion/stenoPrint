@@ -93,6 +93,46 @@ function initSliders() {
 			on: {}
 		});
 	}
+
+  if (document.querySelector('.blog-home__slider')) {
+    new Swiper('.blog-home__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, Pagination],
+      /*
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      */
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3,
+      spaceBetween: 10,
+      speed: 800,
+      loop: true,
+      preloadImages: true,
+      //lazy: true,
+      // Dotts
+      pagination: {
+        el: '.blog-home__slider-pag',
+        clickable: false,
+      },
+      // Arrows
+      navigation: {
+        nextEl: '.nav-blog-home__next',
+        prevEl: '.nav-blog-home__prev',
+      },
+      breakpoints: {
+      	320: {},
+      	768:  { slidesPerView: 1, },
+      	1024: { slidesPerView: 2, },
+        1920: { slidesPerView: 3, },
+      },
+      on: {}
+    });
+  }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
