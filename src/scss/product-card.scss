@@ -1,0 +1,185 @@
+.product-card {
+  &__item {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: rem(30);
+    border: rem(2) solid $whiteColor;
+    background-color: $bg;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-bottom-left-radius: rem(0);
+        border-bottom-right-radius: rem(0);
+
+        .item-product-card__actions {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+.item-product-card {
+  position: relative;
+
+  &__img {
+    border-radius: rem(30);
+  }
+
+  &__top {
+    position: absolute;
+    display: flex;
+    gap: rem(10);
+    top: rem(15);
+    left: rem(15);
+  }
+
+  &__sale,
+  &__popular,
+  &__stock,
+  &__new {
+    border-radius: rem(50);
+    padding: rem(8) rem(13);
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+    line-height: 140%;
+    color: $whiteColor;
+  }
+
+  &__sale {
+    background: linear-gradient(133.97deg, #FFCFE0 3.15%, #E96796 22.8%, #EF3C3C 85.51%);
+  }
+
+  &__popular {
+    background: linear-gradient(133.97deg, #FFE9FE 3.15%, #E39EE0 22.8%, #B669B3 85.51%);
+  }
+
+  &__new {
+    background: linear-gradient(133.97deg, #F2FFEF 3.15%, #93C688 22.8%, #56824C 85.51%);
+  }
+
+  &__stock {
+    background: linear-gradient(133.97deg, #C2CCFF 3.15%, #465EDB 22.8%, #3147BA 85.51%);
+  }
+
+  &__info {
+    padding: rem(20) rem(30);
+  }
+
+  &__actions {
+    position: absolute;
+    width: rem(354);
+    bottom: rem(-97);
+    border-bottom-left-radius: rem(30);
+    border-bottom-right-radius: rem(30);
+    left: rem(-2);
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(10);
+    padding: rem(20) rem(30);
+    background-color: $bg;
+    border: rem(2) solid $whiteColor;
+  }
+}
+
+.info-product-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__title {
+    font-weight: 600;
+    line-height: math.div(22, 16);
+    color: $mainColor;
+  }
+
+  &__code {
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+    line-height: 140%;
+    color: $textColor;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(23, 18);
+    color: $mainColor;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__old-price {
+    position: relative;
+    font-weight: 700;
+    line-height: math.div(18, 14);
+    color: $textColor;
+    float: right;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: rem(1.5);
+      left: 0;
+      top: rem(11);
+      background-color: $textColor;
+    }
+
+    span {
+      font-weight: 400;
+    }
+  }
+}
+
+.actions-product-card {
+  &__btn {
+    padding: rem(15) rem(27);
+    background: $redColor;
+    border-radius: rem(50);
+    font-weight: 600;
+    line-height: math.div(22, 16);
+    line-height: 140%;
+    color: $whiteColor;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $redHover;
+        box-shadow: 0rem 0.9375rem 1.25rem -0.9375rem $redHover;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(23, 18);
+    color: $mainColor;
+    transition: all 0.3s ease 0s;
+    border-bottom: rem(1) solid $mainColor;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: $whiteColor;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $redHover;
+        border-color: $redHover ;
+      }
+    }
+  }
+}
