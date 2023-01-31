@@ -133,6 +133,116 @@ function initSliders() {
       on: {}
     });
   }
+
+  // Слайдеры в tabs к блоку product
+
+  if (document.querySelector('.content-tabs-design__slider')) {
+    new Swiper('.content-tabs-design__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, Pagination],
+      /*
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      */
+      autoHeight: true,
+      observer: true,
+      observeParents: true,
+      slidesPerView: 4,
+      spaceBetween: 10,
+      speed: 800,
+      loop: true,
+      preloadImages: true,
+      //lazy: true,
+      // Dotts
+      pagination: {
+        el: '.nav-tabs-design__pag',
+        clickable: false,
+      },
+      // Arrows
+      navigation: {
+        nextEl: '.nav-tabs-design__next',
+        prevEl: '.nav-tabs-design__prev',
+      },
+      breakpoints: {},
+      on: {}
+    });
+  }
+
+  if (document.querySelector('.content-tabs-vinyl__slider')) {
+    new Swiper('.content-tabs-vinyl__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, Pagination],
+      /*
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      */
+      autoHeight: true,
+      observer: true,
+      observeParents: true,
+      slidesPerView: 4,
+      spaceBetween: 10,
+      speed: 800,
+      loop: true,
+      preloadImages: true,
+      //lazy: true,
+      // Dotts
+      pagination: {
+        el: '.nav-tabs-vinyl__pag',
+        clickable: false,
+      },
+      // Arrows
+      navigation: {
+        nextEl: '.nav-tabs-vinyl__next',
+        prevEl: '.nav-tabs-vinyl__prev',
+      },
+      breakpoints: {},
+      on: {}
+    });
+  }
+
+  if (document.querySelector('.content-tabs-brended__slider')) {
+    new Swiper('.content-tabs-brended__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, Pagination],
+      /*
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      */
+      autoHeight: true,
+      observer: true,
+      observeParents: true,
+      slidesPerView: 4,
+      spaceBetween: 10,
+      speed: 800,
+      loop: true,
+      preloadImages: true,
+      //lazy: true,
+      // Dotts
+      pagination: {
+        el: '.nav-tabs-brended__pag',
+        clickable: false,
+      },
+      // Arrows
+      navigation: {
+        nextEl: '.nav-tabs-brended__next',
+        prevEl: '.nav-tabs-brended__prev',
+      },
+      breakpoints: {},
+      on: {}
+    });
+  }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

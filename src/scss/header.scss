@@ -469,6 +469,6 @@
 }
 
 .active {
-  display: flex;
+  display: flex !important;
   z-index: 9;
 }
