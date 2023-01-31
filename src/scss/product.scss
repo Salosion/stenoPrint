@@ -1,0 +1,187 @@
+.product {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+  }
+}
+
+// Tab design
+.content-tabs-design {
+  &__slider-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: rem(20);
+  }
+
+  &__slider-nav {
+    display: flex;
+    @include adaptiveValue("margin-right", 50, 15);
+    align-items: center;
+  }
+
+  &__slider-more {
+    white-space: nowrap;
+    font-weight: 700;
+    line-height: math.div(16, 22);
+    border-bottom: rem(2) solid $mainColor;
+    padding-bottom: 1px;
+    color: $mainColor;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $redColor;
+        border-color: $redColor;
+      }
+    }
+
+    @media (max-width:768px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.nav-tabs-design {
+
+  &__prev,
+  &__next {
+    cursor: pointer;
+  }
+
+  &__pag {
+    white-space: nowrap;
+
+    .swiper-pagination-bullet {
+      opacity: .2;
+      background-color: #d2d2d9;
+      @include adaptiveValue("width", 215, 60);
+      height: 2px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $textColor;
+    }
+  }
+}
+
+//Tab vinyl
+.content-tabs-vinyl {
+  &__slider-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: rem(20);
+  }
+
+  &__slider-nav {
+    display: flex;
+    @include adaptiveValue("margin-right", 50, 15);
+    align-items: center;
+  }
+
+  &__slider-more {
+    white-space: nowrap;
+    font-weight: 700;
+    line-height: math.div(16, 22);
+    border-bottom: rem(2) solid $mainColor;
+    padding-bottom: 1px;
+    color: $mainColor;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $redColor;
+        border-color: $redColor;
+      }
+    }
+
+    @media (max-width:768px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.nav-tabs-vinyl {
+
+  &__prev,
+  &__next {
+    cursor: pointer;
+  }
+
+  &__pag {
+    white-space: nowrap;
+
+    .swiper-pagination-bullet {
+      opacity: .2;
+      background-color: #d2d2d9;
+      @include adaptiveValue("width", 215, 60);
+      height: 2px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $textColor;
+    }
+  }
+}
+
+//Tab brended
+.content-tabs-brended{
+  &__slider-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: rem(20);
+  }
+
+  &__slider-nav {
+    display: flex;
+    @include adaptiveValue("margin-right", 50, 15);
+    align-items: center;
+  }
+
+  &__slider-more {
+    white-space: nowrap;
+    font-weight: 700;
+    line-height: math.div(16, 22);
+    border-bottom: rem(2) solid $mainColor;
+    padding-bottom: 1px;
+    color: $mainColor;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $redColor;
+        border-color: $redColor;
+      }
+    }
+
+    @media (max-width:768px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.nav-tabs-brended {
+
+  &__prev,
+  &__next {
+    cursor: pointer;
+  }
+
+  &__pag {
+    white-space: nowrap;
+
+    .swiper-pagination-bullet {
+      opacity: .2;
+      background-color: #d2d2d9;
+      @include adaptiveValue("width", 215, 60);
+      height: 2px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $textColor;
+    }
+  }
+}

@@ -6,7 +6,7 @@
     border: rem(2) solid $whiteColor;
     background-color: $bg;
 
-    @media (any-hover: hover) {
+    @media (min-width:$tablet) {
       &:hover {
         border-bottom-left-radius: rem(0);
         border-bottom-right-radius: rem(0);
@@ -66,6 +66,17 @@
   &__info {
     padding: rem(20) rem(30);
   }
+
+  &__arrow {
+    display: none;
+    // @media (min-width:$tablet) {
+    //   display: none;
+    // }
+  }
+
+  // &__arrow-img {
+  //   transform: rotate(90deg);
+  // }
 
   &__actions {
     position: absolute;
