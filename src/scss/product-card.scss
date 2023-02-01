@@ -1,6 +1,6 @@
 .product-card {
   &__item {
-    display: inline-block;
+    display: inline-block; //
     cursor: pointer;
     border-radius: rem(30);
     border: rem(2) solid $whiteColor;
@@ -23,12 +23,14 @@
   position: relative;
 
   &__img {
+    max-width: 100%;
     border-radius: rem(30);
   }
 
   &__top {
     position: absolute;
     display: flex;
+    flex-wrap: wrap;
     gap: rem(10);
     top: rem(15);
     left: rem(15);
@@ -41,9 +43,8 @@
     border-radius: rem(50);
     padding: rem(8) rem(13);
     font-weight: 600;
-    font-size: rem(14);
+    @include adaptiveValue("font-size", 14, 12);
     line-height: math.div(20, 14);
-    line-height: 140%;
     color: $whiteColor;
   }
 
@@ -80,7 +81,7 @@
 
   &__actions {
     position: absolute;
-    width: rem(354);
+    width: rem(342);
     bottom: rem(-97);
     border-bottom-left-radius: rem(30);
     border-bottom-right-radius: rem(30);
@@ -101,23 +102,24 @@
   align-items: center;
   justify-content: space-between;
   align-items: flex-end;
+  gap: rem(10);
 
   &__title {
     font-weight: 600;
+    @include adaptiveValue("font-size", 16, 14);
     line-height: math.div(22, 16);
     color: $mainColor;
   }
 
   &__code {
-    font-size: rem(14);
+    @include adaptiveValue("font-size", 14, 12);
     line-height: math.div(20, 14);
-    line-height: 140%;
     color: $textColor;
   }
 
   &__price {
     font-weight: 600;
-    font-size: rem(18);
+    @include adaptiveValue("font-size", 18, 16);
     line-height: math.div(23, 18);
     color: $mainColor;
 
@@ -127,21 +129,14 @@
   }
 
   &__old-price {
+    display: flex;
     position: relative;
     font-weight: 700;
+    @include adaptiveValue("font-size", 14, 12);
     line-height: math.div(18, 14);
+    text-decoration: line-through;
     color: $textColor;
     float: right;
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: rem(1.5);
-      left: 0;
-      top: rem(11);
-      background-color: $textColor;
-    }
 
     span {
       font-weight: 400;

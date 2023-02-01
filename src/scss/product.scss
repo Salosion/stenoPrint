@@ -1,4 +1,8 @@
 .product {
+  .swiper {
+    min-height: 520px;
+  }
+
   &__title {
     &:not(:last-child) {
       margin-bottom: rem(50);
@@ -127,7 +131,7 @@
 }
 
 //Tab brended
-.content-tabs-brended{
+.content-tabs-brended {
   &__slider-box {
     display: flex;
     align-items: center;
