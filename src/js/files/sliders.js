@@ -50,25 +50,12 @@ function initSliders() {
       // Подключаем модули слайдера
       // для конкретного случая
       modules: [Navigation, Pagination],
-      /*
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      */
       observer: true,
       observeParents: true,
-      allowTouchMove: false,
       slidesPerView: 1,
       spaceBetween: 20,
-      // autoHeight: true,
       speed: 800,
-      //touchRatio: 0,
-      //simulateTouch: false,
       loop: true,
-      //preloadImages: false,
-      //lazy: true,
       // Dotts
       pagination: {
         el: '.slider-hero__pagination',
@@ -93,19 +80,13 @@ function initSliders() {
       on: {}
     });
   }
+  //======================================================================================================================================
 
   if (document.querySelector('.blog-home__slider')) {
     new Swiper('.blog-home__slider', {
       // Подключаем модули слайдера
       // для конкретного случая
       modules: [Navigation, Pagination],
-      /*
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      */
       observer: true,
       observeParents: true,
       slidesPerView: 3,
@@ -113,7 +94,6 @@ function initSliders() {
       speed: 800,
       loop: true,
       preloadImages: true,
-      //lazy: true,
       // Dotts
       pagination: {
         el: '.blog-home__slider-pag',
@@ -133,6 +113,7 @@ function initSliders() {
       on: {}
     });
   }
+  //======================================================================================================================================
 
   // Слайдеры в tabs к блоку product
 
@@ -141,13 +122,6 @@ function initSliders() {
       // Подключаем модули слайдера
       // для конкретного случая
       modules: [Navigation, Pagination],
-      /*
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      */
       observer: true,
       observeParents: true,
       slidesPerView: 4,
@@ -155,7 +129,6 @@ function initSliders() {
       speed: 800,
       loop: true,
       preloadImages: true,
-      //lazy: true,
       // Dotts
       pagination: {
         el: '.nav-tabs-design__pag',
@@ -180,13 +153,6 @@ function initSliders() {
       // Подключаем модули слайдера
       // для конкретного случая
       modules: [Navigation, Pagination],
-      /*
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      */
       observer: true,
       observeParents: true,
       slidesPerView: 4,
@@ -194,7 +160,6 @@ function initSliders() {
       speed: 800,
       loop: true,
       preloadImages: true,
-      //lazy: true,
       // Dotts
       pagination: {
         el: '.nav-tabs-vinyl__pag',
@@ -220,13 +185,6 @@ function initSliders() {
       // Подключаем модули слайдера
       // для конкретного случая
       modules: [Navigation, Pagination],
-      /*
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      */
       observer: true,
       observeParents: true,
       slidesPerView: 4,
@@ -234,7 +192,6 @@ function initSliders() {
       speed: 800,
       loop: true,
       preloadImages: true,
-      //lazy: true,
       // Dotts
       pagination: {
         el: '.nav-tabs-brended__pag',
@@ -254,7 +211,36 @@ function initSliders() {
       on: {}
     });
   }
+  //======================================================================================================================================
+
+  if (document.querySelector('.services__slider')) {
+    new Swiper('.services__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 4,
+      spaceBetween: 10,
+      speed: 800,
+      loop: true,
+      preloadImages: true,
+      // Dotts
+      // pagination: {
+      //   el: '.slider-hero__pagination',
+      //   clickable: false,
+      // },
+      // Arrows
+      // navigation: {
+      //   nextEl: '.slider-hero__next',
+      //   prevEl: '.slider-hero__prev',
+      // },
+      breakpoints: {},
+      on: {}
+    });
+  }
 }
+
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
   // Добавление классов слайдера
