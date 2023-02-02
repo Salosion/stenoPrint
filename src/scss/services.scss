@@ -1,0 +1,83 @@
+.services {
+  @include adaptiveValue("padding-bottom", 120, 60);
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__descr {
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("margin-bottom", 50, 30);
+    @include adaptiveValue("max-width", 710, 335);
+    line-height: math.div(22, 16);
+    color: $textColor;
+  }
+
+  &__swiper {}
+
+  &__slide {
+    max-width: rem(350);
+    border-radius: rem(30);
+    background: radial-gradient(122.18% 82.54% at 0% 100%, rgba(229, 207, 228, 0.2) 0%, rgba(147, 198, 136, 0) 100%, rgba(229, 207, 228, 0) 100%), #fffefc;
+    border: rem(2) solid $whiteColor;
+  }
+}
+
+.slide-services {
+  &__img {
+    border-top-left-radius: rem(30);
+    border-top-right-radius: rem(30);
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__box {
+    padding: rem(20) rem(40);
+  }
+
+  &__box-title {
+    min-height: 70px;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(23, 18);
+    color: $mainColor;
+  }
+
+  &__text {
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(22, 16);
+    color: $textColor;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__link {
+    position: relative;
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(22, 16);
+    font-weight: 600;
+    color: $redColor;
+    padding-right: rem(23);
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: rem(0);
+      top: rem(3);
+      width: rem(18);
+      height: rem(18);
+      background-image: url('@img/icons/arrow.svg');
+    }
+  }
+}
