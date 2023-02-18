@@ -222,20 +222,40 @@ function initSliders() {
       observeParents: true,
       slidesPerView: 4,
       spaceBetween: 10,
+      // centeredSlides: true,
       speed: 800,
       loop: true,
       preloadImages: true,
       // Dotts
-      // pagination: {
-      //   el: '.slider-hero__pagination',
-      //   clickable: false,
-      // },
+      pagination: {
+        el: '.services__pag',
+        clickable: false,
+      },
       // Arrows
-      // navigation: {
-      //   nextEl: '.slider-hero__next',
-      //   prevEl: '.slider-hero__prev',
-      // },
-      breakpoints: {},
+      navigation: {
+        nextEl: '.nav-services__next',
+        prevEl: '.nav-services__prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        550: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        850: {
+          slidesPerView: 3,
+        },
+        1220: {
+          slidesPerView: 3,
+        },
+        1230:{
+          slidesPerView: 4,
+        },
+      },
       on: {}
     });
   }
