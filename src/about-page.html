@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"О нас"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page about-page">
+      <nav class="breadcrumbs">
+        <div class="breadcrumbs__container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                <img class="breadcrumbs__img" src="@img/icons/home.svg" alt="На главную">
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__current">О студии</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="about-page__container">
+        <h3 class="about-page__title title">О студии</h3>
+        <p class="about-page__descr">
+          Используем различные технологии нанесения изображений. В нашем арсенале немецкое оборудование, Итальянские
+          технологии
+          холодного трансфера и другие бесшовные покрытия.
+        </p>
+      </div>
+      <section class="about-page__info info-about-page">
+        <div class="info-about-page__container">
+          <img class="info-about-page__img" src="@img/about/info.png" alt="Изображение">
+          <div class="info-about-page__box">
+            <h3 class="info-about-page__title title">Создаем красивые стены</h3>
+            <p class="info-about-page__text">
+              Но базовый вектор развития влечет за собой процесс внедрения и модернизации соответствующих условий активизации. В
+              целом, конечно, сплочённость команды профессионалов требует определения и уточнения поставленных обществом задач.
+            </p>
+            <p class="info-about-page__text">
+              Разнообразный и богатый опыт говорит нам, что внедрение современных методик представляет собой интересный эксперимент
+              проверки кластеризации усилий. Предварительные выводы неутешительны: базовый вектор развития создаёт предпосылки для
+              дальнейших направлений развития. Не следует, однако, забывать, что граница обучения кадров прекрасно подходит для
+              реализации своевременного выполнения сверхзадачи. Разнообразный и богатый опыт говорит нам, что высокое качество
+              позиционных исследований, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для позиций,
+              занимаемых участниками в отношении поставленных задач. Принимая во внимание показатели успешности, реализация намеченных
+              плановых заданий в значительной степени обусловливает важность анализа существующих паттернов поведения.
+            </p>
+          </div>
+        </div>
+      </section>
+      @@include('html/_feature.htm',{})
+      @@include('html/_work-info.htm',{})
+      @@include('html/_offer.htm',{})
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

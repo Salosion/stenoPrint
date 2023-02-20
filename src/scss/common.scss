@@ -1,4 +1,4 @@
-// Заголовки, общие БЄМ блоки и проче...
+// Заголовки, общие БЄМ блоки и прочеe...
 .title {
   @include adaptiveValue("font-size", 40, 24);
   line-height: math.div(52, 40);
@@ -100,3 +100,40 @@
 }
 
 //========================================================================================================================================================
+
+.breadcrumbs {
+  white-space: nowrap;
+  padding: rem(60) rem(0) rem(20);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    font-size: rem(14);
+    line-height: math.div(20 , 14);
+    color: $textColor;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      &::after {
+        content: '/';
+        padding: 0 rem(10);
+      }
+    }
+  }
+
+  &__link {
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+    color: $textColor;
+  }
+}
