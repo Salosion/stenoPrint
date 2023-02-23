@@ -259,6 +259,43 @@ function initSliders() {
       on: {}
     });
   }
+
+  //======================================================================================================================================
+
+  if (document.querySelector('.contribution__slider')) {
+    new Swiper('.contribution__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 2,
+      spaceBetween: 10,
+      // centeredSlides: true,
+      speed: 800,
+      loop: true,
+      preloadImages: true,
+      // Dotts
+      pagination: {
+        el: '.contribution__slider-pag',
+        clickable: false,
+      },
+      // Arrows
+      navigation: {
+        nextEl: '.nav-slider-contribution__next',
+        prevEl: '.nav-slider-contribution__prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+      },
+      on: {}
+    });
+  }
 }
 
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
