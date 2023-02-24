@@ -1,0 +1,80 @@
+.contacts-page {
+  &__title {
+    @include adaptiveValue("margin-bottom", 120, 60);
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(30);
+  }
+
+  &__info-map {
+    width: 100%;
+    max-width: rem(708);
+    height: auto;
+    border-radius: rem(30);
+  }
+}
+
+.info-contacts-page {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 30, 15);
+    max-width: rem(590);
+  }
+
+  &__box_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(30);
+  }
+
+  &__box {
+    line-height: math.div(20, 14);
+    color: $textColor;
+  }
+
+  &__address {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 28, 22);
+    line-height: math.div(36, 28);
+    color: $mainColor;
+  }
+
+  &__phone,
+  &__email {
+    display: inline-flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+
+  &__phone-link,
+  &__email-link {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 22, 18);
+    line-height: math.div(29, 22);
+    color: $mainColor;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+  }
+
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rem(1) solid $borderColor;
+    border-radius: rem(50);
+    width: rem(52);
+    height: rem(52);
+  }
+}

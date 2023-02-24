@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page contacts-page">
+      <nav class="breadcrumbs">
+        <div class="breadcrumbs__container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                <img class="breadcrumbs__img" src="@img/icons/home.svg" alt="На главную">
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__current">Контакты</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="contacts-page__container">
+        <h3 class="contacts-page__title title">Контакты</h3>
+        <div class="contacts-page__info info-contacts-page">
+          <div class="info-contacts-page__inner">
+            <div class="info-contacts-page__box">
+              <span class="info-contacts-page__span">Адрес:</span>
+              <p class="info-contacts-page__address">Москва, ул. Новая Басманная, дом 18, строение 2</p>
+            </div>
+            <div class="info-contacts-page__box info-contacts-page__box_flex">
+              <div class="info-contacts-page__phone">
+                <span class="info-contacts-page__phone-span">Телефон:</span>
+                <a class="info-contacts-page__phone-link" href="tel:+74951502468">+7 (495) 150-24-68</a>
+              </div>
+              <div class="info-contacts-page__email">
+                <span class="info-contacts-page__email-span">E-mail:</span>
+                <a class="info-contacts-page__email-link" href="mailto:zakaz@stenoprint.ru">zakaz@stenoprint.ru</a>
+              </div>
+            </div>
+            <div class="info-contacts-page__box">
+              <ul class="info-contacts-page__social">
+                <li class="info-contacts-page__social-item">
+                  <a class="info-contacts-page__social-link" href="#">
+                    <img class="info-contacts-page__social-img" src="@img/icons/instagram.svg" alt="Instagram">
+                  </a>
+                </li>
+                <li class="info-contacts-page__social-item">
+                  <a class="info-contacts-page__social-link" href="#">
+                    <img class="info-contacts-page__social-img" src="@img/icons/telegram.svg" alt="Telegram">
+                  </a>
+                </li>
+                <li class="info-contacts-page__social-item">
+                  <a class="info-contacts-page__social-link" href="#">
+                    <img class="info-contacts-page__social-img" src="@img/icons/whatsapp.svg" alt="WhatsApp">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="info-contacts-page__box">
+              <div class="info-contacts-page__time">
+                <p class="info-contacts-page__time-text">Время работы:</p>
+                <p class="info-contacts-page__time-text">Пн - Пт: 9:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+          <img class="contacts-page__info-map" src="@img/contacts/map.png" alt="Карта">
+        </div>
+      </div>
+      @@include('html/_offer.htm',{})
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
