@@ -17,7 +17,7 @@
     color: $textColor;
     padding: rem(15) rem(30);
     background-color: #fffefc;
-    border: rem(2) solid #ededf2;
+    border: rem(2) solid $borderColor;
     border-radius: rem(50);
 
     &._tab-active {
