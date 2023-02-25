@@ -72,7 +72,7 @@
   &__top-phone {
     padding: rem(20) rem(25);
     background: #fffefc;
-    border: rem(2) solid #ededf2;
+    border: rem(2) solid $borderColor;
     border-radius: rem(10);
     @include adaptiveValue("font-size", 16, 14);
     @include adaptiveValue("width", 350, 270);
